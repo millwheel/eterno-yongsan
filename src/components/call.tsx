@@ -30,7 +30,7 @@ export default function CallButton({ label, phoneNumber }: CallButtonProps) {
             aria-label={`${label} 전화걸기`}
             className="
                   w-28 h-28 md:w-36 md:h-36 rounded-full
-                  bg-gray-200/30 hover:bg-white/70
+                  bg-gray-200/30 hover:bg-white
                   text-black/80 font-medium text-sm md:text-base
                   shadow-lg backdrop-blur
                   border border-white/30
