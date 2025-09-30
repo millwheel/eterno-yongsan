@@ -3,7 +3,7 @@ import MobileMenu from "./mobilemenu";
 
 const navItems = [
     { label: "사업개요", href: "about" },
-    { label: "관심고객등록", href: "contact" },
+    { label: "관심고객등록", href: "enroll" },
     { label: "갤러리방문예약", href: "gallery" },
 ];
 
