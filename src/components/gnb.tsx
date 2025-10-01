@@ -10,7 +10,7 @@ const navItems = [
 export default function GlobalNavigationBar() {
     return (
         <header className="fixed w-full top-0 z-50">
-            <div className="bg-gray-200/20">
+            <div className="bg-gray-200/30">
                 <div className="mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
                     {/* Left Logo */}
                     <Link
