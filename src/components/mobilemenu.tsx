@@ -41,7 +41,7 @@ export default function MobileMenu({ navItems }: { navItems: NavItem[] }) {
                 <div className="md:hidden">
                     {/* Drawer panel */}
                     <nav
-                        className="fixed right-0 top-16 w-full bg-white shadow-xl border-l border-black/10 p-5 flex flex-col gap-3"
+                        className="fixed right-0 top-16 w-full bg-gray-200/20 shadow-xl border-l border-black/10 p-5 flex flex-col gap-3"
                         role="dialog"
                         aria-label="모바일 메뉴"
                     >
