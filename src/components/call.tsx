@@ -29,11 +29,10 @@ export default function CallButton({ label, phoneNumber }: CallButtonProps) {
             onClick={onClick}
             aria-label={`${label} 전화걸기`}
             className="
-                  w-28 h-28 md:w-36 md:h-36 rounded-full
-                  bg-gray-200/30 hover:bg-white
+                  w-30 h-30 md:w-40 md:h-40 rounded-full
+                  bg-gray-200/40 hover:bg-gray-200/90 hover:shadow-xl
                   text-black/80 font-medium text-sm md:text-base
                   shadow-lg backdrop-blur
-                  border border-white/30
                   transition focus:outline-none focus:ring-2 focus:ring-white/60
                   cursor-pointer
             "

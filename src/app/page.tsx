@@ -9,7 +9,7 @@ const callInfos = [
 
 export default function Home() {
     return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div>
             {/* Background Video */}
             <video
                 className="absolute top-0 left-0 w-full h-full object-cover"
@@ -21,16 +21,17 @@ export default function Home() {
                 <source src="/video/main.mp4" type="video/mp4" />
                 브라우저가 동영상을 지원하지 않습니다.
             </video>
-
-            {/* Overlay (버튼 컨텐츠) */}
-            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-                {callInfos.map((info) => (
-                    <CallButton
-                        key={info.label}
-                        label={info.label}
-                        phoneNumber={info.phoneNumber}
-                    />
-                ))}
+            <div className="min-h-screen flex items-center justify-center">
+                {/* Overlay (버튼 컨텐츠) */}
+                <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 translate-y-40">
+                    {callInfos.map((info) => (
+                        <CallButton
+                            key={info.label}
+                            label={info.label}
+                            phoneNumber={info.phoneNumber}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
