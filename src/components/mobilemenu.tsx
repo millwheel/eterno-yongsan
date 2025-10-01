@@ -11,15 +11,6 @@ type NavItem = {
 export default function MobileMenu({ navItems }: { navItems: NavItem[] }) {
     const [open, setOpen] = useState(false);
 
-    // 스크롤 잠금
-    useEffect(() => {
-        if (open) document.body.style.overflow = "hidden";
-        else document.body.style.overflow = "";
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, [open]);
-
     return (
         <>
             {/* Hamburger button */}
@@ -50,7 +41,7 @@ export default function MobileMenu({ navItems }: { navItems: NavItem[] }) {
                 <div className="md:hidden">
                     {/* Drawer panel */}
                     <nav
-                        className="fixed right-0 top-16 bottom-0 w-full max-w-xs bg-white shadow-xl border-l border-black/10 p-5 flex flex-col gap-3"
+                        className="fixed right-0 top-16 w-full bg-white shadow-xl border-l border-black/10 p-5 flex flex-col gap-3"
                         role="dialog"
                         aria-label="모바일 메뉴"
                     >
@@ -58,7 +49,7 @@ export default function MobileMenu({ navItems }: { navItems: NavItem[] }) {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="w-full text-center py-3 rounded-md border border-black/10 bg-gray-50 hover:bg-gray-100 active:bg-gray-200 transition"
+                                className="w-full text-center py-3 rounded-md border font-semibold border-black/10 bg-gray-50 hover:bg-gray-100 active:bg-gray-200 transition"
                                 onClick={() => setOpen(false)}
                             >
                                 {item.label}
@@ -69,7 +60,7 @@ export default function MobileMenu({ navItems }: { navItems: NavItem[] }) {
                             className="w-full text-center py-3 rounded-md bg-black text-white font-semibold hover:opacity-90 transition"
                             onClick={() => setOpen(false)}
                         >
-                            1877-5317 전화하기
+                            전화 상담
                         </Link>
                     </nav>
                 </div>
