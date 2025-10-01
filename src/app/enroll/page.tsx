@@ -4,8 +4,6 @@ export default function EnrollPage() {
             {/* 섹션 배경을 흰색으로 */}
             <div className="bg-gray-200">
                 <div className="max-w-6xl mx-auto px-4">
-                    <div aria-hidden className="h-20 md:h-24 lg:h-28" />
-
                     <div className="py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
                         {/* 왼쪽 */}
                         <div className="flex flex-col justify-center">
