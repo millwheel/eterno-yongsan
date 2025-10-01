@@ -9,8 +9,8 @@ const navItems = [
 
 export default function GlobalNavigationBar() {
     return (
-        <header className="sticky top-0 z-50">
-            <div className="backdrop-blur-md border-b border-white/10 bg-gray-200/90">
+        <header className="fixed w-full top-0 z-50">
+            <div className="backdrop-blur-md bg-gray-200/10">
                 <div className="mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
                     {/* Left Logo */}
                     <Link

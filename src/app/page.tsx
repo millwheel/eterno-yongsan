@@ -10,6 +10,19 @@ const callInfos = [
 export default function Home() {
     return (
         <div className="min-h-screen flex items-center justify-center">
+            {/* Background Video */}
+            <video
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+            >
+                <source src="/video/main.mp4" type="video/mp4" />
+                브라우저가 동영상을 지원하지 않습니다.
+            </video>
+
+            {/* Overlay (버튼 컨텐츠) */}
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
                 {callInfos.map((info) => (
                     <CallButton
