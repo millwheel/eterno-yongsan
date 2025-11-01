@@ -17,20 +17,6 @@ export default function EnrollPage() {
 
                 </div>
             </div>
-            {/* 본문 영역 */}
-            <div className="">
-                <div className="max-w-6xl mx-auto px-4">
-                    <div>
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSfjhI2Gc7ojagpM8abF6yV4mFTh-iuJn5PVNIFpKc-t7ArBMg/viewform?embedded=true"
-                            className="w-full min-h-[1200px] border-0"
-                            loading="lazy"
-                        >
-                            로드 중…
-                        </iframe>
-                    </div>
-                </div>
-            </div>
         </section>
     );
 }

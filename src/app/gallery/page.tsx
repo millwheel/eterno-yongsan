@@ -17,20 +17,7 @@ export default function GalleryPage() {
 
                 </div>
             </div>
-            {/* 본문 영역 */}
-            <div className="">
-                <div className="max-w-6xl mx-auto px-4">
-                    <div>
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSeNZmx7gwLP804qQI0Rumeh8BK9EIxy9FqydfSCn1bnugBv2A/viewform?embedded=true"
-                            className="w-full min-h-[1600px] border-0"
-                            loading="lazy"
-                        >
-                            로드 중…
-                        </iframe>
-                    </div>
-                </div>
-            </div>
+
         </section>
     );
 }
