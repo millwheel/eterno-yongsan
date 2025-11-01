@@ -10,14 +10,14 @@ const navItems = [
 export default function GlobalNavigationBar() {
     return (
         <header className="fixed w-full top-0 z-50">
-            <div className="bg-gray-200/30">
+            <div className="bg-[#ededed]">
                 <div className="mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
                     {/* Left Logo */}
                     <Link
                         href="/"
-                        className="font-semibold tracking-widest text-black whitespace-nowrap"
+                        className="tracking-widest text-white bg-[#5e5555] px-5 py-2 rounded-2xl"
                     >
-                        ETERNO YONGSAN
+                        ETERNO
                     </Link>
 
                     {/* Desktop Nav */}
@@ -25,12 +25,12 @@ export default function GlobalNavigationBar() {
                         {navItems.map((item) => (
                             <Link key={item.href}
                                   href={item.href}
-                                  className="bg-white/40 text-black border-b-2 border-black/70 px-4 py-2 rounded-md transition-all duration-300 hover:bg-white hover:shadow-lg"
+                                  className="text-[#5e5555] border-2 border-[#5e5555] px-4 py-2 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-lg"
                             >
                                 {item.label}
                             </Link>
                         ))}
-                        <div className="text-xl font-semibold tracking-tight">
+                        <div className="tracking-widest text-lg text-white bg-[#5e5555] px-4 py-2 rounded-2xl space-nowrap">
                             1877-5317
                         </div>
                     </div>
