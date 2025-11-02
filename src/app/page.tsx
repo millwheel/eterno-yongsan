@@ -64,7 +64,7 @@ export default function Home() {
                         {cards.map((card, index) => (
                             <article
                                 key={index}
-                                className="bg-white rounded-md shadow-sm overflow-hidden"
+                                className="bg-white overflow-hidden"
                             >
                                 {/* 텍스트(상단) / 이미지(하단) 동일 높이 확보 */}
                                 <div className="grid grid-rows-2">
@@ -94,7 +94,6 @@ export default function Home() {
                                             <p className="mt-1">{card.footer2}</p>
                                         </div>
                                     </div>
-
                                 </div>
                             </article>
                         ))}
