@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
-import GlobalNavigationBar from "@/components/gnb";
+import GlobalNavigationBar from "@/components/header";
+import Footer from "@/components/footer";
 
 const notoSansKr = Noto_Sans_KR({
     subsets: ["latin"],
@@ -27,11 +28,7 @@ export default function RootLayout({
       >
       <GlobalNavigationBar />
         {children}
-          <footer className="mt-10 mb-10 text-center text-sm text-gray-500 leading-relaxed">
-              <p>시행사 넥스플랜 주식회사 | 시공사 현대건설</p>
-              <p>TPI (더 프로퍼티 인터네셔녈)</p>
-              <p>서울특별시 강남구 청담동 126-8 (드림파크빌딩 5F)</p>
-          </footer>
+      <Footer />
       </body>
     </html>
   );

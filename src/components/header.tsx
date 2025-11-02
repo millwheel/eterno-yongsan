@@ -30,9 +30,12 @@ export default function GlobalNavigationBar() {
                                 {item.label}
                             </Link>
                         ))}
-                        <div className="tracking-widest text-lg text-white bg-[#5e5555] px-4 py-2 rounded-2xl space-nowrap">
+                        <a
+                            href="tel:18775317"
+                            className="tracking-widest text-lg text-white bg-[#5e5555] px-4 py-2 rounded-2xl whitespace-nowrap hover:bg-[#7a6f6f] transition"
+                        >
                             1877-5317
-                        </div>
+                        </a>
                     </div>
 
                     {/* Mobile Nav */}
