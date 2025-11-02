@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import GlobalNavigationBar from "@/components/gnb";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const notoSansKr = Noto_Sans_KR({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "700"], // 필요에 따라 조정 가능
+    variable: "--font-noto-sans-kr",
+    display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${notoSansKr.variable} antialiased`}
       >
       <GlobalNavigationBar />
         {children}
