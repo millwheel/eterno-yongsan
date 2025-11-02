@@ -2,8 +2,53 @@
 
 import Image from "next/image";
 import PrivacyPolicy from "@/components/privacyPolicy";
+import {useRouter} from "next/navigation";
 
 export default function EnrollPage() {
+    const router = useRouter();
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+
+        const name = String(formData.get("name") || "").trim();
+        const phoneRaw = String(formData.get("phone") || "").trim();
+        const message = String(formData.get("message") || "").trim();
+        const agree = formData.get("agree");
+
+        const phoneDigits = phoneRaw.replace(/\D/g, "");
+
+        if (!name) {
+            alert("성함을 입력해주세요.");
+            return;
+        }
+
+        if (!phoneRaw) {
+            alert("연락처를 입력해주세요.");
+            return;
+        }
+
+        if (phoneDigits.length < 10 || phoneDigits.length > 11) {
+            alert("연락처 형식이 올바르지 않습니다. 숫자 10~11자리로 입력해주세요.");
+            return;
+        }
+
+        if (!message) {
+            alert("문의 내용을 입력해주세요.");
+            return;
+        }
+
+        if (!agree) {
+            alert("개인정보 수집 및 이용에 동의해주세요.");
+            return;
+        }
+
+        alert("등록되었습니다.");
+        router.push("/");
+    };
+
     return (
         <section className="mt-20">
             {/* 배너 영역 */}
@@ -25,7 +70,7 @@ export default function EnrollPage() {
             <div className="max-w-3xl mx-auto mt-10 px-6">
                 <form
                     action=""
-                    onSubmit={(e) => e.preventDefault()}
+                    onSubmit={handleSubmit}
                     className="space-y-6"
                 >
                     {/* 이름 / 연락처 */}
