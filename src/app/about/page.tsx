@@ -18,7 +18,7 @@ export default function AboutPage() {
                     <InfoRow label="구성" value="오피스텔 4실, 공동주택 29세대, 근린생활시설" />
                     <InfoRow label="규모" value="지하 4층 ~ 지상 25층" />
                     <InfoRow label="착공 예정" value="2025년 말 착공 예정" />
-                    <InfoRow label="준공 예정" value="2028년~2029년 준공 예정" />
+                    <InfoRow label="준공 예정" value="2028년 ~ 2029년 준공 예정" />
                     <InfoRow label="시공사" value="현대건설" />
                     <InfoRow label="거래 형태" value="분양" />
                 </div>
@@ -43,7 +43,7 @@ export default function AboutPage() {
 
 function InfoRow({ label, value }: { label: string; value: string }) {
     return (
-        <div className="grid grid-cols-[120px_1fr] border border-gray-200">
+        <div className="grid grid-cols-[120px_1fr] border border-gray-200 gap-2">
             <div className="bg-[#5e5555] text-white text-center py-2 px-3 text-sm md:text-base">
                 {label}
             </div>
