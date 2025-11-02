@@ -6,7 +6,7 @@ export default function EnrollPage() {
             {/* 배너 영역 */}
             <div className="relative w-full h-64 md:h-72">
                 <Image
-                    src="/image/enroll.jpg"
+                    src="/image/enroll_banner.jpg"
                     alt="관심고객 등록 페이지 배너"
                     fill
                     priority

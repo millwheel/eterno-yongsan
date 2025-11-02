@@ -6,8 +6,8 @@ export default function GalleryPage() {
             {/* 배너 영역 */}
             <div className="relative w-full h-64 md:h-72">
                 <Image
-                    src="/image/gallery.jpg"
-                    alt="갤러리 방문 예약"
+                    src="/image/gallery_banner.jpg"
+                    alt="갤러리 방문 예약 배너"
                     fill
                     priority
                     className="object-cover"
