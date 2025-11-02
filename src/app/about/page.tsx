@@ -44,7 +44,7 @@ export default function AboutPage() {
 function InfoRow({ label, value }: { label: string; value: string }) {
     return (
         <div className="grid grid-cols-[120px_1fr] border border-gray-200 gap-2">
-            <div className="bg-[#5e5555] text-white text-center py-2 px-3 text-sm md:text-base">
+            <div className="bg-[#5e5555] text-white text-center py-2 px-3 text-sm md:text-base flex items-center justify-center">
                 {label}
             </div>
             <div className="bg-white text-[#5e5555] py-2 px-4 text-sm md:text-base">

@@ -15,7 +15,7 @@ export default function GlobalNavigationBar() {
                     {/* Left Logo */}
                     <Link
                         href="/"
-                        className="tracking-widest text-white bg-[#5e5555] px-4 py-1 rounded-xl ml-8"
+                        className="tracking-widest text-white bg-[#5e5555] px-4 py-1 rounded-xl"
                     >
                         ETERNO
                     </Link>

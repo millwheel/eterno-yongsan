@@ -36,13 +36,13 @@ export default function Home() {
                 <div className="absolute bottom-40 left-0 right-0 z-10 flex gap-10 justify-center">
                     <Link
                         href="/enroll"
-                        className="px-8 py-3 bg-[#ededed] text-xl text-[#5e5555] rounded-3xl backdrop-blur-sm hover:bg-white transition"
+                        className="px-8 py-3 bg-[#ededed] text-base md:text-xl text-[#5e5555] rounded-3xl backdrop-blur-sm hover:bg-white transition"
                     >
                         관심고객등록
                     </Link>
                     <Link
                         href="/gallery"
-                        className="px-8 py-3 bg-[#ededed] text-xl text-[#5e5555] rounded-3xl backdrop-blur-sm hover:bg-white transition"
+                        className="px-8 py-3 bg-[#ededed] text-base md:text-xl text-[#5e5555] rounded-3xl backdrop-blur-sm hover:bg-white transition"
                     >
                         갤러리방문예약
                     </Link>
@@ -57,13 +57,13 @@ export default function Home() {
             </section>
 
             {/* 3 Card Section */}
-            <section className="relative z-0 bg-[#a79d92] pt-25 pb-15">
+            <section className="relative z-0 bg-[#a79d92] pt-30 pb-15">
                 <div className="max-w-6xl mx-auto px-4">
                     {/* 3개 카드 */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                         {cards.map((card, index) => (
                             <article key={index} className="bg-white overflow-hidden">
-                                <div className="flex flex-col items-center justify-between px-10 pt-10 pb-6 text-[#5e5555]">
+                                <div className="flex flex-col items-center justify-between px-3 pt-8 pb-8 text-[#5e5555]">
                                     {/* 1행: 번호 및 이름 영역 */}
                                     <div className="space-y-2 text-center">
                                         <p className="text-xl">{card.no}</p>
@@ -83,7 +83,7 @@ export default function Home() {
                                         />
                                         {card.comingSoon && (
                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                <span className="text-white/90 text-3xl md:text-4xl tracking-widest drop-shadow text-center">
+                                                <span className="text-white/90 text-xl md:text-2xl tracking-widest drop-shadow text-center">
                                                     COMMING SOON
                                                 </span>
                                             </div>
@@ -91,7 +91,7 @@ export default function Home() {
                                     </div>
 
                                     {/* 3행: 주소/일정 */}
-                                    <div className="text-center text-[13px] leading-relaxed">
+                                    <div className="text-center text-[13px] leading-relaxed mt-20">
                                         <p>{card.footer1}</p>
                                         <p className="mt-1">{card.footer2}</p>
                                     </div>
@@ -101,7 +101,7 @@ export default function Home() {
                     </div>
 
                     {/* 하단 ETERNO 텍스트 */}
-                    <h3 className="mt-10 text-center text-white text-2xl tracking-[0.35em]">
+                    <h3 className="mt-10 text-center text-white text-xl tracking-[0.35em]">
                         ETERNO
                     </h3>
                 </div>
