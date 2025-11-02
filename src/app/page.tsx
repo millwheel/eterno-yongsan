@@ -63,39 +63,37 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {cards.map((card, index) => (
                             <article key={index} className="bg-white overflow-hidden">
-                                <div className="grid grid-rows-3">
-                                    <div className="flex flex-col items-center justify-between px-10 pt-10 pb-6 text-[#5e5555]">
-                                        {/* 1행: 번호 및 이름 영역 */}
-                                        <div className="space-y-2 text-center">
-                                            <p className="text-xl">{card.no}</p>
-                                            <p className="text-[10px] tracking-widest">{card.area}</p>
-                                            <h3 className="mt-6 text-2xl">{card.title}</h3>
-                                        </div>
+                                <div className="flex flex-col items-center justify-between px-10 pt-10 pb-6 text-[#5e5555]">
+                                    {/* 1행: 번호 및 이름 영역 */}
+                                    <div className="space-y-2 text-center">
+                                        <p className="text-xl">{card.no}</p>
+                                        <p className="text-[10px] tracking-widest">{card.area}</p>
+                                        <h3 className="mt-6 text-2xl">{card.title}</h3>
+                                    </div>
 
-                                        {/* 2행: 이미지 영역 */}
-                                        <div className="relative aspect-[4/3]">
-                                            <Image
-                                                src={card.img}
-                                                alt={card.title}
-                                                fill
-                                                className="object-cover"
-                                                sizes="(min-width: 768px) 33vw, 100vw"
-                                                priority
-                                            />
-                                            {card.comingSoon && (
-                                                <div className="absolute inset-0 flex items-center justify-center">
-                                                    <span className="text-white/90 text-3xl md:text-4xl tracking-widest drop-shadow">
-                                                        COMMING SOON
-                                                    </span>
-                                                </div>
-                                            )}
-                                        </div>
+                                    {/* 2행: 이미지 영역 */}
+                                    <div className="relative w-full aspect-[4/3] mt-6 mb-4">
+                                        <Image
+                                            src={card.img} // 예: "/image/cheongdam.jpg"
+                                            alt={card.title}
+                                            fill
+                                            className="object-cover"
+                                            sizes="(min-width: 768px) 33vw, 100vw"
+                                            priority
+                                        />
+                                        {card.comingSoon && (
+                                            <div className="absolute inset-0 flex items-center justify-center">
+                                                <span className="text-white/90 text-3xl md:text-4xl tracking-widest drop-shadow text-center">
+                                                    COMMING SOON
+                                                </span>
+                                            </div>
+                                        )}
+                                    </div>
 
-                                        {/* 3행: 주소/일정 */}
-                                        <div className="text-center text-[13px] leading-relaxed">
-                                            <p>{card.footer1}</p>
-                                            <p className="mt-1">{card.footer2}</p>
-                                        </div>
+                                    {/* 3행: 주소/일정 */}
+                                    <div className="text-center text-[13px] leading-relaxed">
+                                        <p>{card.footer1}</p>
+                                        <p className="mt-1">{card.footer2}</p>
                                     </div>
                                 </div>
                             </article>
