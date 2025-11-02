@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="mt-10 mb-10 text-sm text-[#5e5555]">
+        <footer className="mt-10 mb-10 text-sm">
             {/* top thin line */}
             <div className="max-w-6xl h-px bg-[#5e5555]/30 mx-auto" />
 

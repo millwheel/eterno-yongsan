@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image";
+import PrivacyPolicy from "@/components/privacyPolicy";
 
 export default function EnrollPage() {
     return (
@@ -13,9 +16,85 @@ export default function EnrollPage() {
                     priority
                 />
             </div>
-            {/*폼 영역*/}
-            <div className="max-w-4xl mx-auto mt-10 px-6">
 
+            <div className="my-10">
+                <h1 className="text-center text-2xl font-semibold">에테르노 용산 VIP 관심고객 등록하기</h1>
+            </div>
+
+            {/* 폼 영역 */}
+            <div className="max-w-4xl mx-auto mt-10 px-6">
+                <form
+                    action=""
+                    onSubmit={(e) => e.preventDefault()}
+                    className="space-y-6"
+                >
+                    {/* 이름 / 연락처 */}
+                    <div className="grid grid-cols-[1fr_1.5fr] gap-6">
+                        <div className="flex flex-col gap-2">
+                            <label className="text-base text-[#5e5555]">성명</label>
+                            <div className="border border-black/10 bg-white rounded-md px-4 py-3">
+                                <input
+                                    type="text"
+                                    placeholder="성함"
+                                    className="w-full outline-none"
+                                    name="name"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col gap-2">
+                            <label className="text-base text-[#5e5555]">연락처</label>
+                            <div className="border border-black/10 bg-white rounded-md px-4 py-3">
+                                <input
+                                    type="tel"
+                                    inputMode="tel"
+                                    placeholder="핸드폰 번호를 입력해주세요"
+                                    className="w-full outline-none"
+                                    name="phone"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 문의 내용 */}
+                    <div className="flex flex-col gap-2">
+                        <label className="text-base text-[#5e5555]">문의 내용</label>
+                        <div className="border border-black/10 bg-white rounded-md px-4 py-3">
+                          <textarea
+                              name="message"
+                              placeholder="입력해주세요"
+                              className="w-full h-28 outline-none resize-none"
+                          />
+                        </div>
+                    </div>
+
+                    {/* 개인정보 수집 및 이용 동의 */}
+                    <div className="flex flex-col gap-3">
+                        <p className="text-base text-[#5e5555]">개인정보 수집 및 이용 동의</p>
+
+                        <PrivacyPolicy />
+
+                        <div className="flex items-center gap-2 text-sm text-[#5e5555]">
+                            <input
+                                id="agree"
+                                name="agree"
+                                type="checkbox"
+                                className="h-4 w-4 rounded border-black/20"
+                            />
+                            <label htmlFor="agree">개인정보 수집 및 이용에 동의합니다.</label>
+                        </div>
+                    </div>
+
+                    {/* 버튼 */}
+                    <div className="">
+                        <button
+                            type="submit"
+                            className="px-6 py-3 rounded-2xl bg-[#5e5555] text-white tracking-widest"
+                        >
+                            등록하기
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
     );

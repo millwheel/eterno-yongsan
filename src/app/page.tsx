@@ -49,7 +49,7 @@ export default function Home() {
                 </div>
 
                 {/* Down arrow */}
-                <div className="absolute bottom-10 left-0 right-0 z-10 flex justify-center">
+                <div className="absolute bottom-10 left-0 right-0 z-10 flex justify-center animate-bounce">
                     <div className="w-14 h-14 rounded-full border-2 border-white/50 flex items-center justify-center hover:bg-white/20 transition cursor-pointer">
                         <ChevronDown size={32} className="text-white opacity-80" />
                     </div>
