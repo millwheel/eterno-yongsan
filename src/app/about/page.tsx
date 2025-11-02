@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function AboutPage() {
     return (
-        <div className="relative flex flex-col md:flex-row px-6 md:px-10 mt-40 gap-10 justify-center mb-30">
+        <div className="relative flex flex-col md:flex-row px-6 md:px-10 mt-40 gap-5 justify-center mb-30">
             {/* 왼쪽 정보 섹션 */}
             <div className="max-w-xl w-full space-y-4">
-                <h2 className="text-center text-2xl tracking-widest text-white bg-[#5e5555] py-2 rounded">
+                <h2 className="text-center text-2xl tracking-widest text-white bg-[#5e5555] py-2">
                     ETERNO YONGSAN
                 </h2>
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
                     alt="ETERNO YONGSAN"
                     width={600}               // 기본 기준 너비
                     height={450}              // 4:3 비율
-                    className="object-cover rounded-md w-full h-auto md:w-[600px]"  // 반응형 Tailwind 제어
+                    className="object-cover w-full h-auto md:w-[600px]"  // 반응형 Tailwind 제어
                     sizes="(min-width: 768px) 600px, 100vw" // 반응형 이미지 로딩 규칙
                     priority
                 />
