@@ -22,7 +22,8 @@ export default function Footer() {
                         <a
                             href="tel:18775317"
                             aria-label="전화 연결 1877-5317"
-                            className="w-full md:w-auto tracking-wider md:tracking-widest text-base md:text-lg text-white bg-[#5e5555] px-5 py-3 md:py-1 rounded-2xl whitespace-nowrap hover:bg-[#7a6f6f] transition"
+                            className="w-full md:w-auto tracking-wider md:tracking-widest text-base md:text-lg text-white bg-[#5e5555] px-5 py-3 md:py-1 rounded-2xl whitespace-nowrap
+                            hover:bg-[#7a6f6f] transition"
                         >
                             1877-5317
                         </a>
