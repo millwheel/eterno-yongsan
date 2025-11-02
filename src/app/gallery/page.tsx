@@ -2,22 +2,21 @@ import Image from "next/image";
 
 export default function GalleryPage() {
     return (
-        <section className="w-full">
+        <section className="mt-20">
             {/* 배너 영역 */}
-            <div className="relative w-full h-64 md:h-72">
+            <div>
                 <Image
                     src="/image/gallery_banner.jpg"
-                    alt="갤러리 방문 예약 배너"
-                    fill
+                    alt="갤러리 방문예약 페이지 배너"
+                    width={1536}
+                    height={502}
                     priority
-                    className="object-cover"
                 />
-                {/* 배너 위에 텍스트를 얹고 싶으면 */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-
-                </div>
             </div>
+            {/*폼 영역*/}
+            <div className="max-w-4xl mx-auto mt-10 px-6">
 
+            </div>
         </section>
     );
 }
