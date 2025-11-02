@@ -6,7 +6,7 @@ export default function Footer() {
 
             {/* information */}
             <div className="max-w-6xl mx-auto px-4">
-                <div className="py-8 md:py-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x md:divide-[#5e5555]/30 text-center md:text-left leading-relaxed">
+                <div className="py-8 md:py-10 grid grid-cols-1 md:grid-cols-[1.2fr_0.6fr_1.2fr] gap-8 md:gap-0 md:divide-x md:divide-[#5e5555]/30 text-center md:text-left leading-relaxed">
                     {/* left */}
                     <div className="flex flex-col items-center md:items-end gap-1 md:pr-10">
                         <p>(주) 더부동산중개법인</p>
