@@ -1,25 +1,8 @@
 import Link from "next/link";
 import {ChevronDown} from "lucide-react";
 import Image from "next/image";
-
-const career: [string, string][] = [
-    ["1966", "마드리드대학교 건축학과 교수"],
-    ["1970", "프린스턴대학교, 하버드대학교 스위스 로잔대학교 방문교수"],
-    ["1972–1980", "바르셀로나 공과대학교 교수"],
-    ["1980–1984", "마드리드 공과대학교 교수"],
-    ["1985–1990", "하버드대학교 건축대학원 학과장"],
-    ["1998", "스페인 왕립 예술 아카데미 회원"],
-    ["2013", "미국 예술 아카데미 명예 회원"],
-];
-
-const awards: [string, string][] = [
-    ["1993", "롤프쇼크 상 수상"],
-    ["1996", "프리츠커 상 수상"],
-    ["2001", "미스 반 데 로에 현대건축상 수상"],
-    ["2003", "영국왕립건축가협회 로열 골드 메달 수상"],
-    ["2012", "토마스 제퍼슨 메달 건축 부문 수상"],
-    ["2012", "프린스페 데 아스투리아스 상 수상 외 다수"],
-];
+import {career, awards} from "@/data/rafel";
+import {cards} from "@/data/home";
 
 export default function Home() {
     return (
@@ -74,10 +57,53 @@ export default function Home() {
             </section>
 
             {/* 3 Card Section */}
-            <section className="relative z-0 bg-white py-20">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-3xl text-[#5e5555] mb-10">3 Card Section</h2>
-                    {/* 카드 내용 */}
+            <section className="relative z-0 bg-[#a79d92] pt-25 pb-15">
+                <div className="max-w-6xl mx-auto px-4">
+                    {/* 3개 카드 */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {cards.map((card, index) => (
+                            <article
+                                key={index}
+                                className="bg-white rounded-md shadow-sm overflow-hidden"
+                            >
+                                {/* 텍스트(상단) / 이미지(하단) 동일 높이 확보 */}
+                                <div className="grid grid-rows-2">
+                                    {/* 상단 텍스트 영역 */}
+                                    <div className="flex flex-col items-center justify-between px-10 pt-10 pb-6 text-[#5e5555]">
+                                        <div className="space-y-2 text-center">
+                                            <p className="text-xl">{card.no}</p>
+                                            <p className="text-[10px] tracking-widest">{card.area}</p>
+                                            <h3 className="mt-6 text-2xl">{card.title}</h3>
+                                        </div>
+
+                                        {/* 이미지 영역 */}
+                                        <div className="relative">
+                                            <Image
+                                                src={card.img}
+                                                alt={card.title}
+                                                fill
+                                                className="object-cover"
+                                                sizes="(min-width: 768px) 33vw, 100vw"
+                                                priority
+                                            />
+                                        </div>
+
+                                        {/* 주소/일정 (카드 내부 하단) */}
+                                        <div className="text-center text-[13px] mt-10 leading-relaxed">
+                                            <p>{card.footer1}</p>
+                                            <p className="mt-1">{card.footer2}</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+
+                    {/* 하단 ETERNO 텍스트 */}
+                    <h3 className="mt-10 text-center text-white text-2xl tracking-[0.35em]">
+                        ETERNO
+                    </h3>
                 </div>
             </section>
 
