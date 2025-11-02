@@ -5,6 +5,7 @@ import PrivacyPolicy from "@/components/privacyPolicy";
 import { useRouter } from "next/navigation";
 import React from "react";
 import {formatPhoneInput} from "@/utils/formatPhoneInput";
+import Contact from "@/components/contact";
 
 export default function GalleryPage() {
     const router = useRouter();
@@ -204,13 +205,17 @@ export default function GalleryPage() {
                     </div>
 
                     {/* 버튼 */}
-                    <div className="flex justify-center">
+                    <div className="flex">
                         <button
                             type="submit"
-                            className="px-5 py-2 rounded-2xl text-2xl bg-[#5e5555] text-white tracking-widest cursor-pointer hover:bg-[#7a6f6f] transition"
+                            className="px-5 py-2 rounded-2xl text-xl bg-[#5e5555] text-white tracking-widest cursor-pointer hover:bg-[#7a6f6f] transition"
                         >
                             등록하기
                         </button>
+                    </div>
+
+                    <div className="mt-10">
+                        <Contact />
                     </div>
                 </form>
             </div>

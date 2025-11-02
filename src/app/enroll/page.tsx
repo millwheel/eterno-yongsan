@@ -5,6 +5,7 @@ import PrivacyPolicy from "@/components/privacyPolicy";
 import {useRouter} from "next/navigation";
 import {formatPhoneInput} from "@/utils/formatPhoneInput";
 import React from "react";
+import Contact from "@/components/contact";
 
 export default function EnrollPage() {
     const router = useRouter();
@@ -134,14 +135,18 @@ export default function EnrollPage() {
                     </div>
 
                     {/* 버튼 */}
-                    <div className="flex justify-center">
+                    <div className="flex">
                         <button
                             type="submit"
-                            className="px-5 py-2 rounded-2xl text-2xl bg-[#5e5555] text-white tracking-widest cursor-pointer
+                            className="px-5 py-2 rounded-2xl text-xl bg-[#5e5555] text-white tracking-widest cursor-pointer
                             hover:bg-[#7a6f6f] transition"
                         >
                             등록하기
                         </button>
+                    </div>
+
+                    <div className="mt-10">
+                        <Contact />
                     </div>
                 </form>
             </div>
