@@ -49,7 +49,7 @@ export default function MobileMenu({ navItems }: { navItems: NavItem[] }) {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="w-full text-center py-3 rounded-md border font-semibold border-black/10 bg-gray-50 hover:bg-gray-100 active:bg-gray-200 transition"
+                                className="w-full text-center py-3 rounded-2xl border border-black/10 bg-gray-50 hover:bg-gray-100 active:bg-gray-200 transition"
                                 onClick={() => setOpen(false)}
                             >
                                 {item.label}
@@ -57,10 +57,10 @@ export default function MobileMenu({ navItems }: { navItems: NavItem[] }) {
                         ))}
                         <Link
                             href="tel:18775317"
-                            className="w-full text-center py-3 rounded-md bg-black text-white font-semibold hover:opacity-90 transition"
+                            className="w-full text-center py-3 rounded-2xl bg-[#5e5555] text-white hover:opacity-90 transition"
                             onClick={() => setOpen(false)}
                         >
-                            전화 상담
+                            1877-5317
                         </Link>
                     </nav>
                 </div>

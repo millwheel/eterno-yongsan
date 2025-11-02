@@ -11,7 +11,7 @@ export default function GlobalNavigationBar() {
     return (
         <header className="fixed w-full top-0 z-50">
             <div className="bg-[#ededed]">
-                <div className="mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+                <div className="mx-auto px-4 md:px-10 h-16 flex items-center justify-between">
                     {/* Left Logo */}
                     <Link
                         href="/"
@@ -21,7 +21,7 @@ export default function GlobalNavigationBar() {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <div className="hidden md:flex items-center gap-6">
+                    <div className="hidden md:flex items-center gap-3">
                         {navItems.map((item) => (
                             <Link key={item.href}
                                   href={item.href}

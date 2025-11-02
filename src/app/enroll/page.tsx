@@ -135,7 +135,7 @@ export default function EnrollPage() {
                     </div>
 
                     {/* 버튼 */}
-                    <div className="flex">
+                    <div className="flex justify-center">
                         <button
                             type="submit"
                             className="px-5 py-2 rounded-2xl text-xl bg-[#5e5555] text-white tracking-widest cursor-pointer

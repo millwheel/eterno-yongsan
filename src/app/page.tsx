@@ -1,8 +1,14 @@
 import Link from "next/link";
+import { Gowun_Batang } from "next/font/google";
 import {ChevronDown} from "lucide-react";
 import Image from "next/image";
 import {career, awards} from "@/data/rafel";
 import {cards} from "@/data/home";
+
+const gowun = Gowun_Batang({
+    subsets: ["latin"],
+    weight: ["400", "700"],
+});
 
 export default function Home() {
     return (
@@ -83,8 +89,10 @@ export default function Home() {
                                         />
                                         {card.comingSoon && (
                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                <span className="text-white/90 text-xl md:text-2xl tracking-widest drop-shadow text-center">
-                                                    COMMING SOON
+                                                <span
+                                                    className={`${gowun.className} text-white/90 text-4xl md:text-3xl font-semibold tracking-widest drop-shadow text-center`}
+                                                >
+                                                    COMING SOON
                                                 </span>
                                             </div>
                                         )}
