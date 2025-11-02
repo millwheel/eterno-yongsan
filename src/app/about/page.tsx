@@ -27,15 +27,15 @@ export default function AboutPage() {
 
             {/* 오른쪽 이미지 섹션 */}
             <div className="flex justify-center items-stretch">
-                <div className="relative w-[600px] h-full overflow-hidden">
-                    <Image
-                        src="/image/about.jpg"
-                        alt="ETERNO YONGSAN"
-                        fill
-                        className="object-cover"
-
-                    />
-                </div>
+                <Image
+                    src="/image/about.jpg"
+                    alt="ETERNO YONGSAN"
+                    width={600}               // 기본 기준 너비
+                    height={450}              // 4:3 비율
+                    className="object-cover rounded-md w-full h-auto md:w-[600px]"  // 반응형 Tailwind 제어
+                    sizes="(min-width: 768px) 600px, 100vw" // 반응형 이미지 로딩 규칙
+                    priority
+                />
             </div>
         </div>
     );
@@ -44,10 +44,10 @@ export default function AboutPage() {
 function InfoRow({ label, value }: { label: string; value: string }) {
     return (
         <div className="grid grid-cols-[120px_1fr] border border-gray-200">
-            <div className="bg-[#5e5555] text-white text-center py-2 px-3 text-sm md:text-base font-medium">
+            <div className="bg-[#5e5555] text-white text-center py-2 px-3 text-sm md:text-base">
                 {label}
             </div>
-            <div className="bg-white text-gray-700 py-2 px-4 text-sm md:text-base">
+            <div className="bg-white text-[#5e5555] py-2 px-4 text-sm md:text-base">
                 {value}
             </div>
         </div>

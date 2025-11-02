@@ -25,7 +25,7 @@ export default function GlobalNavigationBar() {
                         {navItems.map((item) => (
                             <Link key={item.href}
                                   href={item.href}
-                                  className="text-[#5e5555] border-2 border-[#5e5555] px-4 py-2 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-lg"
+                                  className="text-[#5e5555] border border-[#5e5555] px-4 py-2 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-lg"
                             >
                                 {item.label}
                             </Link>
