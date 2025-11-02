@@ -4,6 +4,7 @@ import Image from "next/image";
 import PrivacyPolicy from "@/components/privacyPolicy";
 import { useRouter } from "next/navigation";
 import React from "react";
+import {formatPhoneInput} from "@/utils/formatPhoneInput";
 
 export default function GalleryPage() {
     const router = useRouter();
@@ -123,10 +124,11 @@ export default function GalleryPage() {
                             <div className="border border-black/10 bg-white rounded-md px-4 py-3">
                                 <input
                                     type="tel"
-                                    inputMode="tel"
+                                    inputMode="numeric"
                                     placeholder="핸드폰 번호를 입력해주세요"
                                     className="w-full outline-none"
                                     name="phone"
+                                    onInput={formatPhoneInput}
                                 />
                             </div>
                         </div>
@@ -144,7 +146,6 @@ export default function GalleryPage() {
                                 />
                             </div>
                         </div>
-
 
                         <div className="flex flex-col gap-2">
                             <label className="text-base text-[#5e5555]">방문인원</label>

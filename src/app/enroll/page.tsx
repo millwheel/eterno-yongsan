@@ -3,6 +3,8 @@
 import Image from "next/image";
 import PrivacyPolicy from "@/components/privacyPolicy";
 import {useRouter} from "next/navigation";
+import {formatPhoneInput} from "@/utils/formatPhoneInput";
+import React from "react";
 
 export default function EnrollPage() {
     const router = useRouter();
@@ -92,10 +94,11 @@ export default function EnrollPage() {
                             <div className="border border-black/10 bg-white rounded-md px-4 py-3">
                                 <input
                                     type="tel"
-                                    inputMode="tel"
+                                    inputMode="numeric"
                                     placeholder="핸드폰 번호를 입력해주세요"
                                     className="w-full outline-none"
                                     name="phone"
+                                    onInput={formatPhoneInput}
                                 />
                             </div>
                         </div>
