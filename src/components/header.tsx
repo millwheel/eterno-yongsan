@@ -15,7 +15,7 @@ export default function GlobalNavigationBar() {
                     {/* Left Logo */}
                     <Link
                         href="/"
-                        className="tracking-widest text-white bg-[#5e5555] px-5 py-2 rounded-2xl"
+                        className="tracking-widest text-white bg-[#5e5555] px-4 py-1 rounded-xl ml-8"
                     >
                         ETERNO
                     </Link>
@@ -25,14 +25,14 @@ export default function GlobalNavigationBar() {
                         {navItems.map((item) => (
                             <Link key={item.href}
                                   href={item.href}
-                                  className="text-[#5e5555] border border-[#5e5555] px-4 py-2 rounded-2xl transition-all duration-300 hover:bg-white"
+                                  className="text-[#5e5555] border border-[#5e5555] px-3 py-1 rounded-xl transition-all duration-300 hover:bg-white"
                             >
                                 {item.label}
                             </Link>
                         ))}
                         <a
                             href="tel:18775317"
-                            className="tracking-widest text-lg text-white bg-[#5e5555] px-4 py-2 rounded-2xl whitespace-nowrap hover:bg-[#7a6f6f] transition"
+                            className="tracking-widest text-lg text-white bg-[#5e5555] px-3 py-1 rounded-xl whitespace-nowrap hover:bg-[#7a6f6f] transition"
                         >
                             1877-5317
                         </a>
