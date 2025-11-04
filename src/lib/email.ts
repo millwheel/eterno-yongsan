@@ -1,4 +1,5 @@
 import emailjs from '@emailjs/browser';
+import {nowKST} from "@/utils/dateFormatter";
 
 const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;

@@ -1,4 +1,4 @@
-function nowKST(): string {
+export function nowKST(): string {
     const d = new Date();
     // 한국 시간 기준 포맷
     return d.toLocaleString('ko-KR', {
