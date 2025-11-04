@@ -3,14 +3,15 @@
 import Image from "next/image";
 import PrivacyPolicy from "@/components/privacyPolicy";
 import {useRouter} from "next/navigation";
-import {formatPhoneInput} from "@/utils/formatPhoneInput";
+import {formatPhone} from "@/utils/phoneFormatter";
 import React from "react";
 import Contact from "@/components/contact";
+import {sendEnrollEmail} from "@/lib/email";
 
 export default function EnrollPage() {
     const router = useRouter();
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         const form = event.currentTarget;
@@ -48,8 +49,18 @@ export default function EnrollPage() {
             return;
         }
 
-        alert("등록되었습니다.");
-        router.push("/");
+        try {
+            await sendEnrollEmail({
+                name,
+                phone: phoneRaw,
+                message,
+            });
+            alert("등록되었습니다.");
+            router.push("/");
+        } catch (e) {
+            console.error(e);
+            alert("이메일 전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+        }
     };
 
     return (
@@ -99,7 +110,7 @@ export default function EnrollPage() {
                                     placeholder="핸드폰 번호를 입력해주세요"
                                     className="w-full outline-none"
                                     name="phone"
-                                    onInput={formatPhoneInput}
+                                    onInput={formatPhone}
                                 />
                             </div>
                         </div>

@@ -4,8 +4,9 @@ import Image from "next/image";
 import PrivacyPolicy from "@/components/privacyPolicy";
 import { useRouter } from "next/navigation";
 import React from "react";
-import {formatPhoneInput} from "@/utils/formatPhoneInput";
+import {formatPhone} from "@/utils/phoneFormatter";
 import Contact from "@/components/contact";
+import {sendGalleryEmail} from "@/lib/email";
 
 export default function GalleryPage() {
     const router = useRouter();
@@ -20,7 +21,7 @@ export default function GalleryPage() {
         return selectedDate < today;
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         const form = event.currentTarget;
@@ -80,8 +81,21 @@ export default function GalleryPage() {
             return;
         }
 
-        alert("등록되었습니다.");
-        router.push("/");
+        try {
+            await sendGalleryEmail({
+                name,
+                phone: phoneRaw,
+                visitDate,
+                visitors,
+                carNumber,
+                message,
+            });
+            alert("등록되었습니다.");
+            router.push("/");
+        } catch (e) {
+            console.error(e);
+            alert("이메일 전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+        }
     };
 
     return (
@@ -129,7 +143,7 @@ export default function GalleryPage() {
                                     placeholder="핸드폰 번호를 입력해주세요"
                                     className="w-full outline-none"
                                     name="phone"
-                                    onInput={formatPhoneInput}
+                                    onInput={formatPhone}
                                 />
                             </div>
                         </div>

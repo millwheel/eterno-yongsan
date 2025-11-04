@@ -1,4 +1,4 @@
-export function formatPhoneInput(event: React.FormEvent<HTMLInputElement>) {
+export function formatPhone(event: React.FormEvent<HTMLInputElement>) {
     const target = event.currentTarget;
     let digits = target.value.replace(/\D/g, ""); // 숫자만
 
