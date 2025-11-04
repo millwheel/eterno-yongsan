@@ -116,26 +116,28 @@ export default function Home() {
             </section>
 
             {/* Rafel Moneo Section */}
-            <section className="relative w-full aspect-[16/9]">
+            <section className="relative w-full overflow-hidden aspect-[3/4] md:aspect-[16/9]">
                 <Image
                     src="/image/home/rafel_moneo.jpg"
                     alt="Rafael Moneo"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[15%_50%] md:object-center"
+                    priority
+                    sizes="(min-width: 768px) 100vw, 100vw"
                 />
-                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-black/40"/>
 
                 {/* 오른쪽 하단 텍스트 */}
-                <div className="absolute bottom-20 right-20 z-10 text-white text-left leading-relaxed space-y-5">
+                <div className="absolute bottom-5 md:bottom-12 right-5 md:right-12 z-10 text-white text-left leading-relaxed space-y-5">
                     {/* 이름 및 소개 */}
                     <h2 className="text-4xl tracking-widest">Rafel Moneo</h2>
                     <p className="text-sm opacity-90">
-                        1937년 5월 9일, 스페인 출생<br />
+                        1937년 5월 9일, 스페인 출생<br/>
                         마드리드 공과대학교 건축학 학사
                     </p>
 
                     {/* 경력 및 수상 */}
-                    <div className="hidden md:flex justify-start gap-10 text-sm opacity-90 font-light">
+                    <div className="flex flex-col md:flex-row justify-start gap-10 text-sm opacity-90 font-light">
                         {/* Career */}
                         <div>
                             <p className="font-semibold mb-3 tracking-wide">Reputations</p>
