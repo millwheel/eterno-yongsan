@@ -32,9 +32,9 @@ export default function Home() {
                 {/* Center Content */}
                 <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center">
                     <h1 className="flex flex-col items-center justify-center">
-                        <span className="text-6xl tracking-widest">E T E R N O</span>
+                        <span className="text-5xl md:text-6xl tracking-widest">E T E R N O</span>
                         <span className="my-4 w-64 h-[1px] bg-white/50" />
-                        <span className="text-5xl">Y O N G S A N</span>
+                        <span className="text-4xl md:text-5xl">Y O N G S A N</span>
                     </h1>
                 </div>
 
