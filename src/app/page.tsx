@@ -5,6 +5,8 @@ import Image from "next/image";
 import {career, awards} from "@/data/rafel";
 import {cards} from "@/data/home";
 import NavThemeDriver from "@/components/navThemeDriver";
+import EnrollForm from "@/components/EnrollComponent";
+import React from "react";
 
 const gowun = Gowun_Batang({
     subsets: ["latin"],
@@ -167,6 +169,9 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section data-nav-theme="light">
+                <EnrollForm />
             </section>
         </div>
     );
