@@ -17,7 +17,6 @@ export default function NavThemeDriver() {
             return;
         }
 
-        // 초기 진입: 첫 섹션 기준으로 즉시 세팅
         const first = (sections[0].dataset.navTheme as Theme) ?? 'light';
         emit(first);
 
@@ -45,7 +44,6 @@ export default function NavThemeDriver() {
         sections.forEach((s) => io.observe(s));
         ioRef.current = io;
 
-        // 페이지 떠날 때 기본 테마로 복귀 (선택)
         return () => {
             io.disconnect();
             window.dispatchEvent(new CustomEvent('gnb-theme', { detail: { theme: 'light' } }));
