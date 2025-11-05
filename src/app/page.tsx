@@ -75,7 +75,7 @@ export default function Home() {
                         href="/enroll"
                         className="px-8 py-3 bg-[#ededed] text-base md:text-xl text-[#5e5555] rounded-3xl backdrop-blur-sm hover:bg-white transition"
                     >
-                        관심고객등록
+                        &nbsp;관심고객등록&nbsp;
                     </Link>
                     <Link
                         href="/gallery"
