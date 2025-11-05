@@ -41,7 +41,7 @@ export default function MobileMenu({ navItems }: { navItems: NavItem[] }) {
                 <div className="md:hidden">
                     {/* Drawer panel */}
                     <nav
-                        className="fixed right-0 top-16 w-full bg-gray-200/80 shadow-xl border-l border-black/10 p-5 flex flex-col gap-3"
+                        className="fixed right-0 top-16 w-full shadow-xl border-l border-black/10 bg-[#ededed] p-5 flex flex-col gap-3"
                         role="dialog"
                         aria-label="모바일 메뉴"
                     >
@@ -49,7 +49,7 @@ export default function MobileMenu({ navItems }: { navItems: NavItem[] }) {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="w-full text-center py-3 rounded-2xl border border-black/10 bg-gray-50 hover:bg-gray-100 active:bg-gray-200 transition"
+                                className="w-full text-center py-3 rounded-2xl border border-black/10  text-[#5e5555] bg-gray-50 hover:bg-gray-100 active:bg-gray-200 transition"
                                 onClick={() => setOpen(false)}
                             >
                                 {item.label}
