@@ -13,7 +13,7 @@ const navItems = [
 type Theme = 'light' | 'dark' | 'transparent';
 
 export default function GlobalNavigationBar() {
-    const [theme, setTheme] = useState<Theme>('light');
+    const [theme, setTheme] = useState<Theme>('transparent');
 
     useEffect(() => {
         const onTheme = (e: Event) => {

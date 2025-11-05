@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import { Gowun_Batang } from "next/font/google";
 import {ChevronDown} from "lucide-react";
@@ -6,7 +8,7 @@ import {career, awards} from "@/data/rafel";
 import {cards} from "@/data/home";
 import NavThemeDriver from "@/components/navThemeDriver";
 import EnrollForm from "@/components/EnrollComponent";
-import React from "react";
+import React, {useRef} from "react";
 
 const gowun = Gowun_Batang({
     subsets: ["latin"],
@@ -14,6 +16,31 @@ const gowun = Gowun_Batang({
 });
 
 export default function Home() {
+    const cardSectionRef = useRef<HTMLDivElement>(null);
+
+    const handleScrollToCards = () => {
+        if (!cardSectionRef.current) return;
+
+        const targetY = cardSectionRef.current.getBoundingClientRect().top + window.scrollY;
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const duration = 1200; // 👈 천천히 이동 (ms 단위, 1000~2000 정도 추천)
+        const startTime = performance.now();
+
+        const easeInOutCubic = (t: number) =>
+            t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+        const step = (currentTime: number) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const ease = easeInOutCubic(progress);
+            window.scrollTo(0, startY + distance * ease);
+            if (elapsed < duration) requestAnimationFrame(step);
+        };
+
+        requestAnimationFrame(step);
+    };
+
     return (
         <div>
             <NavThemeDriver />
@@ -59,7 +86,7 @@ export default function Home() {
                 </div>
 
                 {/* Down arrow */}
-                <div className="absolute bottom-10 left-0 right-0 z-10 flex justify-center animate-bounce">
+                <div onClick={handleScrollToCards} className="absolute bottom-10 left-0 right-0 z-10 flex justify-center animate-bounce">
                     <div className="w-14 h-14 rounded-full border-2 border-white/50 flex items-center justify-center hover:bg-white/20 transition cursor-pointer">
                         <ChevronDown size={32} className="text-white opacity-80" />
                     </div>
@@ -67,7 +94,7 @@ export default function Home() {
             </section>
 
             {/* 3 Card Section */}
-            <section data-nav-theme="dark" className="relative z-0 bg-[#a79d92] pt-30 pb-15">
+            <section ref={cardSectionRef} data-nav-theme="dark" className="relative z-0 bg-[#a79d92] pt-30 pb-15">
                 <div className="max-w-6xl mx-auto px-4">
                     {/* 3개 카드 */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
