@@ -1,3 +1,5 @@
+import {FaInstagram, FaYoutube} from "react-icons/fa";
+
 export default function Footer() {
     return (
         <footer className="mt-10 mb-10 text-sm">
@@ -13,7 +15,32 @@ export default function Footer() {
                         <p>대표 : 정연서 | 등록번호 : 506-88-02125</p>
                         <p>주소 : 서울시 강남구 삼성동 153-55 심스빌딩 3층</p>
                         {/* 아이콘 링크 */}
-                        <div className="mt-2 flex gap-3" />
+                        <div className="flex gap-5 text-2xl text-[#5e5555]">
+                            <a
+                                href="https://www.youtube.com/@theplacejenny"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-red-500 transition"
+                            >
+                                <FaYoutube />
+                            </a>
+                            <a
+                                href="https://pf.kakao.com/_xjJxcAn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-[#fee500] transition"
+                            >
+                                카카오톡
+                            </a>
+                            <a
+                                href="https://www.instagram.com/therealty_luxhome/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-pink-500 transition"
+                            >
+                                <FaInstagram />
+                            </a>
+                        </div>
                     </div>
 
                     {/* middle */}
