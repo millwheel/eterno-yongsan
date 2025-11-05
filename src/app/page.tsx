@@ -4,6 +4,7 @@ import {ChevronDown} from "lucide-react";
 import Image from "next/image";
 import {career, awards} from "@/data/rafel";
 import {cards} from "@/data/home";
+import NavThemeDriver from "@/components/navThemeDriver";
 
 const gowun = Gowun_Batang({
     subsets: ["latin"],
@@ -13,8 +14,9 @@ const gowun = Gowun_Batang({
 export default function Home() {
     return (
         <div>
+            <NavThemeDriver />
             {/* Intro section */}
-            <section className="relative w-full h-screen overflow-hidden">
+            <section data-nav-theme="transparent" className="relative w-full h-screen overflow-hidden">
                 {/* Background Video */}
                 <video
                     className="absolute top-0 left-0 w-full h-full object-cover"
@@ -63,7 +65,7 @@ export default function Home() {
             </section>
 
             {/* 3 Card Section */}
-            <section className="relative z-0 bg-[#a79d92] pt-30 pb-15">
+            <section data-nav-theme="dark" className="relative z-0 bg-[#a79d92] pt-30 pb-15">
                 <div className="max-w-6xl mx-auto px-4">
                     {/* 3개 카드 */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -116,7 +118,7 @@ export default function Home() {
             </section>
 
             {/* Rafel Moneo Section */}
-            <section className="relative w-full overflow-hidden aspect-[3/4] md:aspect-[16/9]">
+            <section data-nav-theme="light" className="relative w-full overflow-hidden aspect-[3/4] md:aspect-[16/9]">
                 <Image
                     src="/image/home/rafel_moneo.jpg"
                     alt="Rafael Moneo"
