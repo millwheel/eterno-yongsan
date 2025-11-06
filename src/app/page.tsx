@@ -197,6 +197,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
             <section data-nav-theme="light">
                 <EnrollForm />
             </section>

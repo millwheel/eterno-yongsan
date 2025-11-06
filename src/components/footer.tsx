@@ -1,4 +1,5 @@
 import {FaInstagram, FaYoutube} from "react-icons/fa";
+import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -30,7 +31,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 className="hover:text-[#fee500] transition"
                             >
-                                카카오톡
+                                <Image src="/image/kakao_icon.png" alt="카카오톡아이콘" width={22} height={22} />
                             </a>
                             <a
                                 href="https://www.instagram.com/therealty_luxhome/"

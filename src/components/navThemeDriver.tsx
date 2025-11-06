@@ -36,8 +36,8 @@ export default function NavThemeDriver() {
             },
             {
                 root: null,
-                rootMargin: '-1% 0px -1% 0px',
-                threshold: [0.2, 0.4, 0.6],
+                rootMargin: '-8% 0px -8% 0px',
+                threshold: [0.6, 0.8],
             }
         );
 
