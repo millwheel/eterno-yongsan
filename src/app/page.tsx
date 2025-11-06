@@ -161,8 +161,8 @@ export default function Home() {
                 {/* 오른쪽 하단 텍스트 */}
                 <div className="absolute bottom-4 sm:bottom-6 md:bottom-10 right-2 sm:right-6 md:right-10 z-10 text-white text-left leading-relaxed space-y-5">
                     {/* 이름 및 소개 */}
-                    <h2 className="text-3xl md:text-4xl tracking-widest">Rafel Moneo</h2>
-                    <p className="text-xs md:text-sm opacity-90">
+                    <h2 className="text-3xl md:text-4xl tracking-widest">R a f e l &nbsp; M o n e o</h2>
+                    <p className="text-sm md:text-base">
                         1937년 5월 9일, 스페인 출생<br/>
                         마드리드 공과대학교 건축학 학사
                     </p>
@@ -171,11 +171,11 @@ export default function Home() {
                     <div className="flex flex-col md:flex-row justify-start gap-5 md:gap-10 text-sm opacity-90 font-light">
                         {/* Career */}
                         <div>
-                            <p className="font-semibold mb-3 tracking-wide">Reputations</p>
+                            <p className="mb-3 tracking-wide">Reputations</p>
                             <ul className="space-y-1 leading-relaxed">
                                 {career.map(([year, text], idx) => (
-                                    <li key={`${idx}`} className="flex gap-3 md:gap-6 text-sm md:text-base">
-                                        <span className="w-20 text-left font-medium">{year}</span>
+                                    <li key={`${idx}`} className="flex gap-3 md:gap-6 text-xs md:text-sm">
+                                        <span className="w-20 text-left">{year}</span>
                                         <span className="flex-1">{text}</span>
                                     </li>
                                 ))}
@@ -184,11 +184,11 @@ export default function Home() {
 
                         {/* Awards */}
                         <div>
-                            <p className="font-semibold mb-3 tracking-wide">Awards</p>
+                            <p className="mb-3 tracking-wide">Awards</p>
                             <ul className="space-y-1 leading-relaxed">
                                 {awards.map(([year, text], idx) => (
-                                    <li key={`${idx}`} className="flex gap-3 md:gap-6 text-sm md:text-base">
-                                        <span className="w-20 text-left font-medium">{year}</span>
+                                    <li key={`${idx}`} className="flex gap-3 md:gap-6 text-xs md:text-sm">
+                                        <span className="w-20 text-left">{year}</span>
                                         <span className="flex-1">{text}</span>
                                     </li>
                                 ))}
