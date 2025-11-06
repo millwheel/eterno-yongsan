@@ -1,4 +1,5 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
+import Image from "next/image";
 
 export default function Contact() {
     return (
@@ -7,7 +8,7 @@ export default function Contact() {
                 href="https://pf.kakao.com/_xjJxcAn"
                 className="flex items-center gap-2 tracking-widest text-base text-white bg-[#5e5555] px-4 py-2 rounded-lg hover:bg-[#7a6f6f] transition"
             >
-                <MessageCircle size={18} />
+                <Image src="/image/kakao_icon.png" alt="카카오톡아이콘" width={22} height={22} />
                 카카오톡 문의
             </a>
             <a
