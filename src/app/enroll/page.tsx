@@ -8,7 +8,7 @@ export default function EnrollPage() {
 
     return (
         <section className="mt-20">
-            <div>
+            <div className="flex justify-center">
                 <Image
                     src="/image/enroll_banner.jpg"
                     alt="관심고객 등록 페이지 배너"

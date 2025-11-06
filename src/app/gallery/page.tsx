@@ -101,7 +101,7 @@ export default function GalleryPage() {
     return (
         <section className="mt-20">
             {/* 배너 영역 */}
-            <div>
+            <div className="flex justify-center">
                 <Image
                     src="/image/gallery_banner.jpg"
                     alt="갤러리 방문예약 페이지 배너"
