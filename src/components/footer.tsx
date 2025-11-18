@@ -14,7 +14,7 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-end gap-1 md:pr-10">
                         <p>(주) 더부동산중개법인</p>
                         <p>대표 : 정연서 | 등록번호 : 506-88-02125</p>
-                        <p>주소 : 서울시 강남구 삼성동 153-55 심스빌딩 3층</p>
+                        <p>주소 : 서울특별시 용산구 이태원로 223-5 (한남동, 유니언타운)</p>
                         {/* 아이콘 링크 */}
                         <div className="flex gap-5 text-2xl text-[#5e5555]">
                             <a
@@ -61,7 +61,7 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-start gap-1 md:pl-10">
                         <p>시행사 넥스플랜 주식회사 | 시공사 현대건설</p>
                         <p>TPI (더 프로퍼티 인터네셔녈)</p>
-                        <p>서울특별시 강남구 청담동 126-8 (드림파크빌딩 5F)</p>
+                        <p>서울특별시 강남구 삼성로 570, 8층(삼성동, 석천빌딩)</p>
                     </div>
                 </div>
             </div>
